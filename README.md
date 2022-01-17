@@ -10,23 +10,6 @@
 
 
 
-### 游戏界面及操作说明
-
-
-
-#### 画板界面：
-
-#### ![board](C:/Users/97215/Desktop/Computer Graphics/大作业/cg_project/report/img/board.png)
-
-
-
-
-
-#### 场景界面：
-
-#### ![93551866b9f6907aad5f8983f15364e](C:/Users/97215/Desktop/Computer Graphics/大作业/cg_project/report/img/scene.png)
-
-
 
 ### 实现过程
 
@@ -70,7 +53,6 @@ $$
 
 窗口大小设置为1280*800且固定不可拖动，相机视角位置为（0，0，3）。计算得屏幕对应坐标如下：
 
-![trans](C:\Users\97215\Desktop\cg_project\report\img\trans.png)
 
 对应变换公式为：
 $$
@@ -87,7 +69,6 @@ Bezier控制顶点，控制顶点之间的连线以及Bezier曲线便能经过�
 
 旋转体模型通过绘制三角面片的方式生成。
 
-![rotator](C:\Users\97215\Desktop\cg_project\report\img\rotator.png)
 
 将该Bezier曲线围绕Y轴旋转一周，每隔10°取下一个点，通过简单的半径弧度制运算便能得到整个模型上所有点的坐标。在VBO按照A、B、C、D的顺序存入点数据，使用**GL_TRIANGLE_STRIP**的方式绘制，便能得到旋转体模型。将纹理绑定至该模型时，按照此法绘制的模型的起始点A对应纹理坐标的（1.0f，1.0f），终点对应（0.0f，0.0f），同样通过简单的计算便能将纹理坐标一一对应至模型上。
 
